@@ -11,8 +11,8 @@ public class GameManager : MonoBehaviour
 {
     public GameObject[] NumberImage;
     public Sprite[] Number;
-    public GameObject[] StageMap;
-    public GameObject LoadMap;
+    //public GameObject[] StageMap;
+    //public GameObject LoadMap;
     public Text StageText;
     /*
     public GameObject BG_1;
@@ -33,8 +33,8 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("SampleScene");
     }
 
-    public void Next_Stage()
-    {
+    //public void next_stage()
+    //{
         /*
         //배경 바꾸기
         if (!BG_flag)
@@ -51,41 +51,41 @@ public class GameManager : MonoBehaviour
             BG_flag = false;
         }
         */
-        DataManager.Instance.stage += 1;
-        DataManager.Instance.stageView += 1;
+    //    DataManager.Instance.stage += 1;
+    //    DataManager.Instance.stageView += 1;
         
-        if (DataManager.Instance.stage > StageMap.Length)
-        {
-            DataManager.Instance.stage = DataManager.Instance.stage % StageMap.Length;
-            if (DataManager.Instance.stage == 0)
-            {
-                DataManager.Instance.stage = StageMap.Length;
-            }
-        }
-        StageStart();
-    }
+    //    if (DataManager.Instance.stage > StageMap.Length)
+    //    {
+    //        DataManager.Instance.stage = DataManager.Instance.stage % StageMap.Length;
+    //        if (DataManager.Instance.stage == 0)
+    //        {
+    //            DataManager.Instance.stage = StageMap.Length;
+    //        }
+    //    }
+    //    StageStart();
+    //}
 
-    public void StageStart()
-    {
-        for (int temp = 1; temp <= StageMap.Length; temp++)
-        {
-            if (temp == DataManager.Instance.stage)
-            {
-                StageMap[temp - 1].transform.position = new Vector3(15f, StageMap[temp - 1].transform.position.y, StageMap[temp - 1].transform.position.z);
-                StageMap[temp - 1].SetActive(true);
-            }
-            else
-            {
-                StageMap[temp - 1].SetActive(false);
-            }
-        }
-    }
+    //public void StageStart()
+    //{
+    //    for (int temp = 1; temp <= StageMap.Length; temp++)
+    //    {
+    //        if (temp == DataManager.Instance.stage)
+    //        {
+    //            StageMap[temp - 1].transform.position = new Vector3(15f, StageMap[temp - 1].transform.position.y, StageMap[temp - 1].transform.position.z);
+    //            StageMap[temp - 1].SetActive(true);
+    //        }
+    //        else
+    //        {
+    //            StageMap[temp - 1].SetActive(false);
+    //        }
+    //    }
+    //}
 
-    public void Load_Map()
-    {
-        LoadMap.transform.position = new Vector3(15f, LoadMap.transform.position.y, LoadMap.transform.position.z);
-        LoadMap.SetActive(true);
-    }
+    //public void Load_Map()
+    //{
+    //    LoadMap.transform.position = new Vector3(15f, LoadMap.transform.position.y, LoadMap.transform.position.z);
+    //    LoadMap.SetActive(true);
+    //}
 
     public GameObject EndPanel;
 

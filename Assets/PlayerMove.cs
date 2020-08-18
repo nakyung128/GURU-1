@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
-    public float jump = 2f;
-    public float jump2 = 4f;
+    public float jump = 4f;
+    public float jump2 = 6f;
 
     int jumpCount = 0;
 
